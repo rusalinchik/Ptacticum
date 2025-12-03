@@ -1,14 +1,14 @@
 ﻿#include <iostream>
 using namespace std;
 
-int max(const int* arr, int size) {
-    int maxVal = arr[0];
+int min(const int* arr, int size) {
+    int minVal = arr[0];
     for (int i = 1; i < size; i++) {
-        if (arr[i] > maxVal) {
-            maxVal = arr[i];
+        if (arr[i] < minVal) {
+            minVal = arr[i];
         }
     }
-    return maxVal;
+    return minVal;
 }
 
 int main() {
@@ -24,8 +24,8 @@ int main() {
         cin >> arr[i];
     }
 
-    int maximum = max(arr, n);
-    cout << "Максимум: " << maximum << endl;
+    int minimum = min(arr, n);
+    cout << "Минимум: " << minimum << endl;
 
     delete[] arr;
     return 0;
